@@ -1,0 +1,42 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>PokéAPI Supreme</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content fullscreen="true">
+  <!-- Sección para buscar por ID -->
+  <ion-item>
+    <ion-label position="stacked">ID del Pokémon</ion-label>
+    <ion-input type="number" [(ngModel)]="id"></ion-input>
+  </ion-item>
+  <ion-button expand="full" (click)="getPokemonDataID(id)">Buscar por ID</ion-button>
+
+  <div *ngIf="pokemon">
+    <ion-card>
+      <ion-card-content>
+        <ion-card-title>Name: {{ pokemon.name }}</ion-card-title>
+       
+        
+      </ion-card-content>
+    </ion-card>
+  </div>
+
+  <!-- Sección para buscar por Nombre -->
+ 
+
+
+ 
+  <div *ngIf="pokemon">
+    <ion-card>
+      <ion-card-content>
+        <ion-card-title> {{ pokemon.type }}</ion-card-title>
+        <ion-img [src]="pokemon.sprites.front_default"></ion-img>
+        <ion-card-subtitle *ngFor="let type of pokemon.types">Tipo: {{ type.type.name }}</ion-card-subtitle>
+      </ion-card-content>
+    </ion-card>
+  </div>
+  
+
+ 
+</ion-content>

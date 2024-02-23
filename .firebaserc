@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "pokedex-supreme": {
+      "hosting": {
+        "app": [
+          "pokedex-supreme"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "pokedex-supreme"
+  }
+}
